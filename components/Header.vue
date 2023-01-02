@@ -18,7 +18,10 @@ headerMenu.value = data.story.content.header_menu;
       <nav v-if="headerMenu">
         <ul class="flex space-x-8 text-lg font-bold">
           <li v-for="blok in headerMenu" :key="blok._uid">
-            <NuxtLink :to="blok.link.cached_url" class="hover:text-[#50b0ae]">
+            <NuxtLink
+              :to="`/${blok.link.cached_url}`"
+              class="hover:text-[#50b0ae]"
+            >
               {{ blok.link.story?.name }}
             </NuxtLink>
           </li>
