@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/tailwindcss",
   ],
+  generate: {
+    routes: ["/", "/config", "/blog", "/hello-world"],
+  },
 
   ssr: false,
   runtimeConfig: {
